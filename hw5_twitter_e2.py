@@ -85,7 +85,7 @@ def get_text_list(tweet_dict_list):
             atweet.append(adict['text'])
     return atweet
 
-def get_tweet(username, count, auth):
+def get_tweet(username, num_tweets, auth):
     base_url = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
     params = {'screen_name': username, 'count': num_tweets}
     return make_request_using_cache(base_url, params, auth, username)
