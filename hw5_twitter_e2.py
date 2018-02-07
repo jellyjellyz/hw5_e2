@@ -102,7 +102,7 @@ def filted_freqDist(tokenizedList):
     for tokened_sen in tokenizedList:
         for token in tokened_sen:
             if token not in stop_words and token.isalpha():
-                freq_dist[token] += 1
+                freq_dist[token.lower()] += 1
     return freq_dist
 
 
